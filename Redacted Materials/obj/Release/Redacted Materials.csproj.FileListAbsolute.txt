@@ -1,0 +1,13 @@
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\bin\Release\Redacted Materials.exe.config
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\bin\Release\Redacted Materials.exe
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\bin\Release\Redacted Materials.pdb
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\Redacted Materials.csprojResolveAssemblyReference.cache
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\MainWindow.baml
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\MainWindow.g.cs
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\App.g.cs
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\Redacted Materials_MarkupCompile.cache
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\Redacted Materials.g.resources
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\Redacted_Materials.Properties.Resources.resources
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\Redacted Materials.csproj.GenerateResource.Cache
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\Redacted Materials.exe
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Release\Redacted Materials.pdb
