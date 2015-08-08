@@ -14,3 +14,13 @@ c:\users\deiby\documents\visual studio 2013\Projects\Redacted Materials\Redacted
 C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\bin\Debug\Redacted Materials.exe.config
 C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\Redacted Materials.exe
 C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\Redacted Materials.pdb
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\bin\Debug\Redacted Materials.exe
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\bin\Debug\Redacted Materials.pdb
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\Redacted Materials.csprojResolveAssemblyReference.cache
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\MainWindow.baml
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\MainWindow.g.cs
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\App.g.cs
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\Redacted Materials_MarkupCompile.cache
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\Redacted Materials.g.resources
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\Redacted_Materials.Properties.Resources.resources
+C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials\obj\Debug\Redacted Materials.csproj.GenerateResource.Cache
