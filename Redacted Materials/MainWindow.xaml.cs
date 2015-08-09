@@ -36,6 +36,10 @@ namespace Redacted_Materials
         {
             this.DragMove();
         }
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+        }
         
 
         private void CreateMaterials(object sender, System.EventArgs e)
@@ -97,7 +101,6 @@ namespace Redacted_Materials
                 {
                     string[] FilePath = System.IO.File.ReadAllLines(Path);
                     LinetoAdd = 56;
-                    MessageBox.Show("number of lines: " + LinetoAdd);
                     ArrayList lines = new ArrayList();
                     System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
                     string line;
@@ -146,7 +149,6 @@ namespace Redacted_Materials
                 {
                     string[] FilePath = System.IO.File.ReadAllLines(Path);
                     LinetoAddw = 120;
-                    MessageBox.Show("number of lines: " + LinetoAddw);
                     ArrayList lines = new ArrayList();
                     System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
                     string line;
@@ -194,7 +196,6 @@ namespace Redacted_Materials
                 {
                     string[] FilePath = System.IO.File.ReadAllLines(Path);
                     LinetoAddm = 98;
-                    MessageBox.Show("number of lines: " + LinetoAddm);
                     ArrayList lines = new ArrayList();
                     System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
                     string line;
@@ -227,6 +228,8 @@ namespace Redacted_Materials
 
             }
         }
+
+       
 
     }
 }
