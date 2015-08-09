@@ -96,8 +96,7 @@ namespace Redacted_Materials
                 try
                 {
                     string[] FilePath = System.IO.File.ReadAllLines(Path);
-                    LinetoAdd = 56;
-                    MessageBox.Show("number of lines: " + LinetoAdd);
+                    LinetoAdd = 56;              
                     ArrayList lines = new ArrayList();
                     System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
                     string line;
@@ -146,7 +145,6 @@ namespace Redacted_Materials
                 {
                     string[] FilePath = System.IO.File.ReadAllLines(Path);
                     LinetoAddw = 120;
-                    MessageBox.Show("number of lines: " + LinetoAddw);
                     ArrayList lines = new ArrayList();
                     System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
                     string line;
@@ -194,7 +192,6 @@ namespace Redacted_Materials
                 {
                     string[] FilePath = System.IO.File.ReadAllLines(Path);
                     LinetoAddm = 98;
-                    MessageBox.Show("number of lines: " + LinetoAddm);
                     ArrayList lines = new ArrayList();
                     System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
                     string line;
