@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Redacted_Materials.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="360" Width="350" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Icon="C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials/redacted.ico">
+        Title="MainWindow" Height="360" Width="350" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None" Icon="./redacted.ico">
 
     <Grid Background="#FF131212">       
         <Rectangle Margin="0,0,0,330" MouseDown="Rectangle_MouseDown" Fill="#FF680000"/>
@@ -20,7 +20,7 @@
         <Button Margin="131,315,135,19" Content="Add Weapon" Click="CreateMaterials" Background="#FF680000" HorizontalAlignment="Center" Width="84" BorderBrush="#FF303030" BorderThickness="4,4,4,1"/>
         <Rectangle Margin="0,338,0,0" Fill="#FF680000"/>
         <TextBlock Margin="249,341,0,-6" Foreground="White" FontSize="12">Credits: CreaTed</TextBlock>
-        <Image Source="C:\Users\deiby\Documents\GitHub\Redacted Materials\Redacted Materials/redacted.ico" Margin="7,0,325,329"></Image>
+        <Image Source="./redacted.ico" Margin="7,0,325,329"></Image>
     </Grid>
 
 
