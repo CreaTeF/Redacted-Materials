@@ -54,7 +54,14 @@ localize,WEAPON_MW3AS50_DESC,"AS50 imported from IW5"
 localize,WEAPON_MK14,"MK14"
 localize,WEAPON_MK14_DESC,"MK14 imported from IW5"
 
+localize,WEAPON_gv,"gv"
+localize,WEAPON_gv_DESC,"gv imported from IW5 "
+
+localize,WEAPON_bb,"bb"
+localize,WEAPON_bb_DESC,"bb imported from IW5 "
+
 localize,MPUI_REDACTED,"Redacted"
+
 
 
 # StringTable
@@ -89,6 +96,8 @@ material,menu_mp_weapons_m60e4
 material,menu_mp_weapons_m60e4_big
 material,menu_mp_weapons_pkp
 material,menu_mp_weapons_pkp_big
+material,menu_mp_weapons_gv
+material,menu_mp_weapons_gv_big
 material,menu_mp_weapons_mw3as50
 material,menu_mp_weapons_mw3as50_big
 material,menu_mp_weapons_mk14
@@ -111,8 +120,5 @@ weapon,r5_mp
 weapon,mts255_mp
 weapon,mw3as50_mp
 weapon,pp90m1_mp
+weapon,gv_mp
 weapon,mk14_mp
-
-
-localize,WEAPON_MK14,"MK14s"
-localize,WEAPON_MK14s_DESC,"MK14s imported from IW5 "

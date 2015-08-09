@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections;
 
 namespace Redacted_Materials
 {
@@ -21,6 +22,9 @@ namespace Redacted_Materials
     public partial class MainWindow : Window
     {
         public static string quote = "\"";
+        public static int LinetoAdd; // line for localize
+        public static int LinetoAddw;// line for weapon
+        public static int LinetoAddm;// line for materials
 
         public MainWindow()
         {
@@ -41,28 +45,40 @@ namespace Redacted_Materials
             string FilenameBig = Path + Big.Text + "_big.rme"; //this is the menu_mp_weapons_ _Big.rme
             string Bigmaterial = "baseMat menu_mp_weapons_mp7\nflags 0\ncolorMap " + Big.Text; // this is what'll contain the menu_mp_weapons_weapon_Big.rme
             string Hudmaterial = "baseMat menu_mp_weapons_mp7\nflags 0\ncolorMap " + Hud.Text; // this is what'll contain the menu_mp_weapons_weapon.rme
-            PatchredactedCsv();
 
-            if (!System.IO.File.Exists(Filename) && !System.IO.File.Exists(FilenameBig))
+
+            if (Hud.Text.Length > 4 && Big.Text.Length > 16)
             {
-                using (System.IO.StreamWriter file = new System.IO.StreamWriter(Filename))
+                PatchredactedCsv();
+                Addweapon();
+                AddMaterials();
+                if (!System.IO.File.Exists(Filename) && !System.IO.File.Exists(FilenameBig))
                 {
-                    file.WriteLine(Hudmaterial);
-                    file.Close();
+                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(Filename))
+                    {
+                        file.WriteLine(Hudmaterial);
+                        file.Close();
+                    }
+                    using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(FilenameBig))
+                    {
+                        file2.WriteLine(Bigmaterial);
+                        file2.Close();
+                    }
+                    MessageBox.Show("The files: " + Big.Text + ".rme " + " and " + Big.Text + "_big.rme" + " have been created sucefully.");
+
                 }
-                using (System.IO.StreamWriter file2 = new System.IO.StreamWriter(FilenameBig))
+                else
                 {
-                    file2.WriteLine(Bigmaterial);
-                    file2.Close();
+                    MessageBox.Show("The files: " + Big.Text + ".rme " + " and " + Big.Text + "_big.rme" + " already exist.");
+                    return;
                 }
-                MessageBox.Show("The files: " + Big.Text + ".rme " + " and " + Big.Text + "_big.rme" + " have been created sucefully.");
-               
             }
             else
             {
-                MessageBox.Show("The files: " + Big.Text + ".rme " + " and " + Big.Text + "_big.rme" + " already exist.");
+                MessageBox.Show("you have to add the name of the hud and the name of the Big");
                 return;
             }
+            
         }
 
 
@@ -76,22 +92,141 @@ namespace Redacted_Materials
                 return;
             }
             else
-            {  
-                using (System.IO.StreamWriter wRedactedfile = new System.IO.StreamWriter(Path, true))
+            {
+                try
                 {
-                    string text = System.IO.File.ReadAllText(Path);
-                    string newText = string.Join(quote + " \n", text.Split(new[] { quote + PatchRedacted.Text }, StringSplitOptions.RemoveEmptyEntries));
-                    wRedactedfile.Close();
-                    wRedactedfile.WriteLine(newText);
-                    wRedactedfile.Close();
-                } 
-                    
+                    string[] FilePath = System.IO.File.ReadAllLines(Path);
+                    LinetoAdd = 56;
+                    MessageBox.Show("number of lines: " + LinetoAdd);
+                    ArrayList lines = new ArrayList();
+                    System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
+                    string line;
+                    while ((line = rdr.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                    rdr.Close();
+                    if (lines.Count > LinetoAdd)
+                    {
+                        lines.Insert(LinetoAdd, PatchRedacted.Text + "\n");
+                    }
+                    else
+                    {
+                        lines.Add(PatchRedacted.Text);
+                    }
+                    System.IO.StreamWriter wrtr = new System.IO.StreamWriter(Path);
+                    foreach (string strNewLine in lines)
+                    {
+                        wrtr.WriteLine(strNewLine);
+                    }
+                    wrtr.Close();
+                        
+                }
                 
+                catch (System.IO.IOException e)
+                {
+                    MessageBox.Show(e.ToString());
+                }
+                 
             }
-
 
         }
 
+        private void Addweapon()
+        {
+            string Path = "./zone_source\\patch_redacted.csv";
+
+            if (!System.IO.File.Exists(Path))
+            {
+                return;
+            }
+            else
+            {
+                try
+                {
+                    string[] FilePath = System.IO.File.ReadAllLines(Path);
+                    LinetoAddw = 120;
+                    MessageBox.Show("number of lines: " + LinetoAddw);
+                    ArrayList lines = new ArrayList();
+                    System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
+                    string line;
+                    while ((line = rdr.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                    rdr.Close();
+                    if (lines.Count > LinetoAddw)
+                    {
+                        lines.Insert(LinetoAddw, Weapon.Text);
+                    }
+                    else
+                    {
+                        lines.Add(Weapon.Text);
+                    }
+                    System.IO.StreamWriter wrtr = new System.IO.StreamWriter(Path);
+                    foreach (string strNewLine in lines)
+                    {
+                        wrtr.WriteLine(strNewLine);
+                    }
+                    wrtr.Close();
+
+                }
+
+                catch (System.IO.IOException e)
+                {
+                    MessageBox.Show(e.ToString());
+                }
+
+            }
+        }
+
+        private void AddMaterials()
+        {
+            string Path = "./zone_source\\patch_redacted.csv";
+
+            if (!System.IO.File.Exists(Path))
+            {
+                return;
+            }
+            else
+            {
+                try
+                {
+                    string[] FilePath = System.IO.File.ReadAllLines(Path);
+                    LinetoAddm = 98;
+                    MessageBox.Show("number of lines: " + LinetoAddm);
+                    ArrayList lines = new ArrayList();
+                    System.IO.StreamReader rdr = new System.IO.StreamReader(Path);
+                    string line;
+                    while ((line = rdr.ReadLine()) != null)
+                    {
+                        lines.Add(line);
+                    }
+                    rdr.Close();
+                    if (lines.Count > LinetoAddm)
+                    {
+                        lines.Insert(LinetoAddm, "material," + Big.Text + "\n" + "material," + Big.Text + "_big");
+                    }
+                    else
+                    {
+                        lines.Add(Weapon.Text);
+                    }
+                    System.IO.StreamWriter wrtr = new System.IO.StreamWriter(Path);
+                    foreach (string strNewLine in lines)
+                    {
+                        wrtr.WriteLine(strNewLine);
+                    }
+                    wrtr.Close();
+
+                }
+
+                catch (System.IO.IOException e)
+                {
+                    MessageBox.Show(e.ToString());
+                }
+
+            }
+        }
 
     }
 }

@@ -4,16 +4,25 @@
         Title="MainWindow" Height="360" Width="350" ResizeMode="NoResize" AllowsTransparency="True" WindowStyle="None">
 
     <Grid Background="#FF131212">
+        <Border Margin="-16,10,-14,0" BorderBrush="Black" BorderThickness="1" CornerRadius="10">
+            <Border.Effect>
+                <DropShadowEffect/>
+            </Border.Effect>
+        </Border>
         <Rectangle Margin="0,0,0,330" MouseDown="Rectangle_MouseDown" Fill="#FF680000"/>
         <TextBlock HorizontalAlignment="Center" MouseDown="Rectangle_MouseDown"  Foreground="White" Margin="138,10,108,325" FontFamily="Ethnocentric Rg" Width="104" FontSize="10">Redacted</TextBlock>
+        <TextBlock Margin="326,4,7,338" FontSize="15">x</TextBlock>
         <TextBlock Foreground="#FF680000" HorizontalAlignment="Center" FontSize="25" Margin="67,53,54,252" Width="229" FontFamily="CGF Locust Resistance">Materials</TextBlock>
         <TextBlock Margin="67,113,203,222" Foreground="#FF680000" FontSize="20">Hud</TextBlock>
         <TextBlock Margin="249,113,21,222" Foreground="#FF680000" FontSize="20">Big</TextBlock>
+        <TextBlock Margin="10,271,260,64" Foreground="#FF680000" FontSize="20">Weapon: </TextBlock>
         <TextBlock Margin="10,174,135,161" Foreground="White" FontSize="12">Replace it with the weapon you want.</TextBlock>
         <TextBox Margin="10,142,191,196" Background="White" x:Name="Hud" Text="hud_"/>
+        <TextBox Margin="100,276,101,62" Background="White" x:Name="Weapon" Text="weapon,weapon_mp"/>
         <TextBox Margin="191,142,10,196" Background="White" x:Name="Big" Text="menu_mp_weapons_"/>
-        <TextBox Margin="10,194,10,54" Text="" x:Name="PatchRedacted"/>
-        <Button Margin="131,317,135,17" Content="Apply" Click="CreateMaterials" Background="#FF680000" HorizontalAlignment="Center" Width="84" BorderBrush="Black"/>
+        <TextBox Margin="10,194,10,95" Text="" x:Name="PatchRedacted"/>      
+        <Border BorderBrush="#FF303030" Margin="0,30,0,22" BorderThickness="4,5,4,4"/>
+        <Button Margin="131,315,135,19" Content="Apply" Click="CreateMaterials" Background="#FF680000" HorizontalAlignment="Center" Width="84" BorderBrush="#FF303030" BorderThickness="4,4,4,1"/>
         <Rectangle Margin="0,338,0,0" Fill="#FF680000"/>
     </Grid>
 
